@@ -34,11 +34,11 @@ Training prior supplements: Some of the prior information provided by PEAL for t
 
 Our method creates the training data with different levels of noise for training different models. The parameter --train_preset_T means the levels of noise, ranging from 999 to 0, and bigger train_preset_T refers to more noisy data. For example, if you want to train 5 models, then the five training commands can be set as below:
 ```bash
-python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --fix_train_T --train_preset_T=999 --Slerp
-python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --fix_train_T --train_preset_T=800 --Slerp
-python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --fix_train_T --train_preset_T=600 --Slerp
-python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --fix_train_T --train_preset_T=400 --Slerp
-python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --fix_train_T --train_preset_T=200 --Slerp
+python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/trainval.py --fix_train_T --train_preset_T=999 --Slerp
+python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/trainval.py --fix_train_T --train_preset_T=800 --Slerp
+python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/trainval.py --fix_train_T --train_preset_T=600 --Slerp
+python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/trainval.py --fix_train_T --train_preset_T=400 --Slerp
+python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/trainval.py --fix_train_T --train_preset_T=200 --Slerp
 ```
 
 ### Testing
