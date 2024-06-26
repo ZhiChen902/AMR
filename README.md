@@ -8,6 +8,8 @@ Adaptive Multi-step Refinement Network for Robust Point Cloud Registration
 
 Point Cloud Registration (PCR) estimates the relative rigid transformation between two point clouds of the same scene. Despite significant progress with learning-based approaches, existing methods still face challenges when the overlapping region between the two point clouds is small. In this paper, we propose an adaptive multi-step refinement network that refines the registration quality at each step by leveraging the information from the preceding step. To achieve this, we introduce a training procedure and a refinement network. Firstly, to adapt the network to the current step, we utilize a generalized one-way attention mechanism, which prioritizes the last step's estimated overlapping region, and we condition the network on step indices. Secondly, instead of training the network to map either random transformations or a fixed pre-trained model's estimations to the ground truth, we train it on transformations with varying registration qualities, ranging from accurate to inaccurate, thereby enhancing the network's adaptiveness and robustness. Despite its conceptual simplicity, our method achieves state-of-the-art performance on both the 3DMatch/3DLoMatch and KITTI benchmarks. Notably, on 3DLoMatch, our method reaches \textbf{80.4\%} recall rate, with an absolute improvement of \textbf{1.2\%}. Our code will be made public upon publication.
 
+![](pipeline.pdf)
+
 ## Requirements
 
 Follow [GeoTransformer](https://github.com/qinzheng93/GeoTransformer) to install the dependencies.
