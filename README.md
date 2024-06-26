@@ -10,10 +10,12 @@ Point Cloud Registration (PCR) estimates the relative rigid transformation betwe
 
 ## Requirements
 
-If you are using conda, you may configure SC2-PCR++ as:
+Follow [GeoTransformer](https://github.com/qinzheng93/GeoTransformer) to install the dependencies.
 
-    conda env create -f environment.yml
-    conda activate SC2_PCR
+```
+pip install -r requirements.txt
+python setup.py build develop
+```
     
 ## 3DMatch & 3DLoMatch
 
@@ -41,5 +43,5 @@ bash eval_multi.sh 0 3DLoMatch
 ## Acknowledgements
 - [PREDATOR](https://github.com/prs-eth/OverlapPredator)
 - [GeoTransformer](https://github.com/qinzheng93/GeoTransformer)
-- [PEAL]([https://github.com/Gardlin/PEAL])
+- [PEAL](https://github.com/Gardlin/PEAL)
 
