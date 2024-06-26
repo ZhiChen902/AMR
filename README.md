@@ -15,50 +15,31 @@ If you are using conda, you may configure SC2-PCR++ as:
     conda env create -f environment.yml
     conda activate SC2_PCR
     
-## 3DMatch
+## 3DMatch & 3DLoMatch
 
 ### Data preparation
 
-Downsample and extract FPFH and FCGF descriptors for each frame of the 3DMatch test dataset. [Here](https://drive.google.com/file/d/1kRwuTHlNPr9siENcEMddCO23Oaq0cz-X/view?usp=sharing) we provide the processed test set with pre-computed FPFH/FCGF descriptors. The data should be organized as follows:
+[3D prior data](https://drive.google.com/file/d/1ArrJvTzlbQjSHZi3Zl0oHesuoE7Nr16P/view?usp=sharing) Unzip the file, you can get two folders, one is for training, the other is for testing/validating.
 
-```
---data--3DMatch                
-        ├── fragments                 
-        │   ├── 7-scene-redkitechen/
-        |   |   ├── cloud_bin_0.ply
-        |   |   ├── cloud_bin_0_fcgf.npz
-        |   |   ├── cloud_bin_0_fpfh.npz
-        │   |   └── ...      
-        │   ├── sun3d-home_at-home_at_scan1_2013_jan_1/      
-        │   └── ...                
-        ├── gt_result                   
-        │   ├── 7-scene-redkitechen-evaluation/   
-        |   |   ├── 3dmatch.log
-        |   |   ├── gt.info
-        |   |   ├── gt.log
-        │   |   └── ...
-        │   ├── sun3d-home_at-home_at_scan1_2013_jan_1-evaluation/
-        │   └── ...                               
-```
+[Point cloud data](https://github.com/prs-eth/OverlapPredator)
+The dataset is downloaded from [PREDATOR](https://github.com/prs-eth/OverlapPredator).
 
+Unzip the prior data:
 ### Testing
 
 Use the following command for testing.
 
 ```bash
-python ./test_3DMatch.py --config_path config_json/config_3DMatch_FPFH.json
+bash eval_multi.sh 0 3DMatch
 ```
 or
 ```bash
-python ./test_3DMatch.py --config_path config_json/config_3DMatch_FCGF.json
+bash eval_multi.sh 0 3DLoMatch
 ```
 
-The CUDA_DEVICE and basic parameters can be changed in the json file.
-
-```
 
 ## Acknowledgements
 - [PREDATOR](https://github.com/prs-eth/OverlapPredator)
 - [GeoTransformer](https://github.com/qinzheng93/GeoTransformer)
+- [PEAL]([https://github.com/Gardlin/PEAL])
 
-We thank the respective authors for open sourcing their methods, the code is heavily borrowed from [GeoTransformer](https://github.com/qinzheng93/GeoTransformer)
