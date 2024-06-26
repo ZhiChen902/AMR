@@ -23,12 +23,12 @@ python setup.py build develop
 
 ### Data preparation
 
-[3D prior data](https://drive.google.com/file/d/1ArrJvTzlbQjSHZi3Zl0oHesuoE7Nr16P/view?usp=sharing) Unzip the file, you can get two folders, one is for training, the other is for testing/validating.
+[3D prior data](https://drive.google.com/file/d/1ArrJvTzlbQjSHZi3Zl0oHesuoE7Nr16P/view?usp=sharing) Unzip the file, you can get two folders, one is for training, the other is for testing/validating. The dataset is downloaded from [PEAL]([https://github.com/prs-eth/OverlapPredator](https://github.com/prs-eth/OverlapPredator)).
 
 [Point cloud data](https://github.com/prs-eth/OverlapPredator)
 The dataset is downloaded from [PREDATOR](https://github.com/prs-eth/OverlapPredator).
 
-Unzip the prior data:
+Training prior supplements: Some of the prior information provided by PEAL for training is missing. In order to ensure thetraining, please extract prior_Geo_Train.zip from the project.
 ### Testing
 
 Use the following command for testing.
