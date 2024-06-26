@@ -9,15 +9,6 @@ import sys
 import torch
 
 import socket
-if "yr-cuda11.3" in socket.gethostname():
-    pass
-elif "Zhifei-PC" in socket.gethostname():
-    pass
-else:
-    sys.path.remove("/mnt/F/chenzhi/DiffReg-peal")
-sys.path.append(os.getcwd())
-
-print(sys.path)
 
 from geotransformer.engine import EpochBasedTrainer
 

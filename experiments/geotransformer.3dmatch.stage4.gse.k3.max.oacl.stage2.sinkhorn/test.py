@@ -8,16 +8,6 @@ import numpy as np
 import os
 import sys
 import socket
-if "yr-cuda11.3" in socket.gethostname():
-    pass
-elif "Zhifei-PC" in socket.gethostname():
-    pass
-else:
-    # sys.path.remove("/mnt/F/chenzhi/PEAL")
-    xxxxx=0
-sys.path.append(os.getcwd())
-
-print(sys.path)
 
 from geotransformer.engine import SingleTester
 from geotransformer.utils.torch import release_cuda
