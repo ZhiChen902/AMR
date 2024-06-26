@@ -28,7 +28,7 @@ python setup.py build develop
 [Point cloud data](https://github.com/prs-eth/OverlapPredator)
 The dataset is downloaded from [PREDATOR](https://github.com/prs-eth/OverlapPredator).
 
-Training prior supplements: Some of the prior information provided by PEAL for training is missing. In order to ensure thetraining, please extract prior_Geo_Train.zip from the project.
+Training prior supplements: Some of the prior information provided by PEAL for training is missing. In order to ensure the training, please extract prior_Geo_train.zip from the project.
 
 ### Training
 
