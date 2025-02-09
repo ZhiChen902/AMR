@@ -1,0 +1,10 @@
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --snapshot=snapshot/model1.pth.tar --benchmark=$2 --iteration=0
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/eval.py --snapshot=snapshot/model1.pth.tar --benchmark=$2 --method=lgr --iteration=0
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --snapshot=snapshot/model2.pth.tar --benchmark=$2 --iteration=0 --use_pre_step 
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/eval.py --snapshot=snapshot/model2.pth.tar --benchmark=$2 --method=lgr --iteration=0
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --snapshot=snapshot/model3.pth.tar --benchmark=$2 --iteration=0 --use_pre_step 
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/eval.py --snapshot=snapshot/model3.pth.tar --benchmark=$2 --method=lgr --iteration=0
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --snapshot=snapshot/model4.pth.tar --benchmark=$2 --iteration=0 --use_pre_step 
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/eval.py --snapshot=snapshot/model4.pth.tar --benchmark=$2 --method=lgr --iteration=0
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/test.py --snapshot=snapshot/model5.pth.tar --benchmark=$2 --iteration=0 --use_pre_step 
+CUDA_VISIBLE_DEVICES=$1 python ./experiments/geotransformer.3dmatch.stage4.gse.k3.max.oacl.stage2.sinkhorn/eval.py --snapshot=snapshot/model5.pth.tar --benchmark=$2 --method=lgr --iteration=0
